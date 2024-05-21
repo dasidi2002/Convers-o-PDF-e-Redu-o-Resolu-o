@@ -1,0 +1,8 @@
+FROM python:3.8-slim
+
+RUN pip install Flask
+
+COPY ./app /app
+WORKDIR /app
+
+CMD ["python", "log_service.py"]
